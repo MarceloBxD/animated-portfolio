@@ -1,9 +1,10 @@
+import "./index.css";
+
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "./index.css";
-import { Home } from "./routes/Home/Home.jsx";
 import { Projects } from "./routes/Projects/Projects.jsx";
 
+import { Home } from "./routes/Home/Home.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 const router = createBrowserRouter([
@@ -14,6 +15,10 @@ const router = createBrowserRouter([
   {
     path: "/projects",
     element: <Projects />,
+  },
+  {
+    path: "*",
+    element: <div>404</div>,
   },
 ]);
 

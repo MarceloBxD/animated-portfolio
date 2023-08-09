@@ -4,7 +4,7 @@ import axios from "axios";
 import * as S from "./styles";
 import { TypeAnimation } from "react-type-animation";
 import { Courses } from "../Courses";
-import { HeroPattern } from "../HeroPattern";
+// import { HeroPattern } from "../HeroPattern";
 import { motion } from "framer-motion";
 import { BiSolidUpArrow } from "react-icons/bi";
 export const Counter = () => {

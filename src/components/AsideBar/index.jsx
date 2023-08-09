@@ -32,13 +32,6 @@ export const AsideBar = () => {
       icon: <BsFillFileCodeFill />,
       isChoosed: false,
     },
-    {
-      id: 4,
-      title: "Knowledge",
-      path: "/knowledge",
-      icon: <LuZap />,
-      isChoosed: false,
-    },
   ];
   const [selectedIndex, setSelectedIndex] = useState(asideData[0].id);
 
