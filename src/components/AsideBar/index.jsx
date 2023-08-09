@@ -34,8 +34,8 @@ export const AsideBar = () => {
     },
     {
       id: 4,
-      title: "Courses",
-      path: "/courses",
+      title: "Knowledge",
+      path: "/knowledge",
       icon: <LuZap />,
       isChoosed: false,
     },
