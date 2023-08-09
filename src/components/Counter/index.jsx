@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import CountUp from "react-countup";
 import axios from "axios";
 import * as S from "./styles";
+import { TypeAnimation } from "react-type-animation";
+import { Courses } from "../Courses";
 
 export const Counter = () => {
   const [numberOfRepos, setNumberOfRepos] = useState(undefined);
@@ -24,28 +26,47 @@ export const Counter = () => {
     },
     {
       id: 2,
-      number: 36,
+      number: 5,
       text: "Clients",
     },
     {
       id: 3,
-      number: 56,
-      text: "Awards",
+      number: 8,
+      text: "Courses",
     },
   ];
 
   return (
     <S.Container>
+      <TypeAnimation
+        style={{ fontSize: "2rem", fontWeight: "bold" }}
+        cursor={false}
+        repeat={Infinity}
+        sequence={[
+          "I'm a Front-end Developer",
+          2000,
+          "I'm a Back-end Developer",
+          2000,
+          "I'm studying to become a Fullstack Developer",
+          2000,
+        ]}
+      />
       {data.map((item) => (
-        <div style={{ padding: "10px", fontSize: "24px" }} key={item.id}>
+        <S.CardContainer
+          initial={{ y: -1000 }}
+          animate={{ y: 0 }}
+          transition={{ delay: item.id * 0.5, type: "spring", stiffness: 50 }}
+          key={item.id}
+        >
           <CountUp
             start={0}
             end={item.number}
-            duration={5}
+            duration={9}
             suffix={` - ${item.text}`}
           />
-        </div>
+        </S.CardContainer>
       ))}
+      <Courses />
     </S.Container>
   );
 };
