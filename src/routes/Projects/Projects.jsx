@@ -8,22 +8,6 @@ export const Projects = () => {
   return (
     <S.Container>
       <Counter />
-      <motion.div
-        animate={{ opacity: [0, 1, 0] }}
-        transition={{ duration: 1.5, repeat: Infinity }}
-        style={{
-          position: "fixed",
-          bottom: "10px",
-          left: "50%",
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          transform: "translate(-50%)",
-        }}
-      >
-        <BiSolidUpArrow style={{ transform: "rotate(180deg)" }} size={25} />
-        <p>Scroll Down</p>
-      </motion.div>
     </S.Container>
   );
 };

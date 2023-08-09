@@ -5,6 +5,9 @@ export const CourseContainer = styled(motion.div)`
   display: flex;
   justify-content: center;
   align-items: center;
+  left: 50%;
+  position: absolute;
+  transform: translateX(-50%);
 
   @media screen and (max-width: 768px) {
     width: 50%;

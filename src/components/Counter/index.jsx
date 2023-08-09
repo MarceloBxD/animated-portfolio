@@ -4,7 +4,9 @@ import axios from "axios";
 import * as S from "./styles";
 import { TypeAnimation } from "react-type-animation";
 import { Courses } from "../Courses";
-
+import { HeroPattern } from "../HeroPattern";
+import { motion } from "framer-motion";
+import { BiSolidUpArrow } from "react-icons/bi";
 export const Counter = () => {
   const [numberOfRepos, setNumberOfRepos] = useState(undefined);
 
@@ -38,8 +40,20 @@ export const Counter = () => {
 
   return (
     <S.Container>
+      <motion.div
+        animate={{ opacity: [0, 1, 0] }}
+        transition={{ duration: 1.5, repeat: Infinity }}
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+        }}
+      >
+        <BiSolidUpArrow style={{ transform: "rotate(180deg)" }} size={25} />
+        <p>Scroll Down</p>
+      </motion.div>
       <TypeAnimation
-        style={{ fontSize: "2rem", fontWeight: "bold" }}
+        style={{ fontSize: "2rem", fontWeight: "bold", marginBottom: "30px" }}
         cursor={false}
         repeat={Infinity}
         sequence={[
@@ -51,6 +65,7 @@ export const Counter = () => {
           2000,
         ]}
       />
+
       {data.map((item) => (
         <S.CardContainer
           initial={{ y: -1000 }}

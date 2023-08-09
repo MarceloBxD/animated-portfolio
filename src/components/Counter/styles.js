@@ -5,6 +5,7 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 30px;
 
   @media (max-width: 768px) {
     flex-direction: column;
@@ -22,7 +23,7 @@ export const CardContainer = styled(motion.div)`
   background-color: #fff;
   cursor: default;
   color: #000;
-  margin: 10px;
+  margin: 10px 0;
   width: 200px;
   box-shadow: 10px 10px 10px 0px black;
   border-radius: 3px;
