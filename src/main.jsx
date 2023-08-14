@@ -2,10 +2,8 @@ import "./index.css";
 
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { Projects } from "./routes/Projects/Projects.jsx";
-
-import { Home } from "./routes/Home/Home.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { Home, Projects } from "./routes";
 
 const router = createBrowserRouter([
   {

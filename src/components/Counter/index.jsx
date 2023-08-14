@@ -1,13 +1,11 @@
 import React, { useState, useEffect } from "react";
-import CountUp from "react-countup";
 import axios from "axios";
+import CountUp from "react-countup";
+import { Courses, ScrollDown } from "../../components";
 import * as S from "./styles";
 import { TypeAnimation } from "react-type-animation";
-import { Courses } from "../Courses";
-// import { HeroPattern } from "../HeroPattern";
-import { motion } from "framer-motion";
-import { BiSolidUpArrow } from "react-icons/bi";
-export const Counter = () => {
+
+const Counter = () => {
   const [numberOfRepos, setNumberOfRepos] = useState(undefined);
 
   useEffect(() => {
@@ -33,55 +31,55 @@ export const Counter = () => {
     },
     {
       id: 3,
-      number: 8,
+      number: 9,
       text: "Courses",
     },
   ];
 
   return (
     <S.Container>
-      <motion.div
-        animate={{ opacity: [0, 1, 0] }}
-        transition={{ duration: 1.5, repeat: Infinity }}
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-        }}
-      >
-        <BiSolidUpArrow style={{ transform: "rotate(180deg)" }} size={25} />
-        <p>Scroll Down</p>
-      </motion.div>
       <TypeAnimation
-        style={{ fontSize: "2rem", fontWeight: "bold", marginBottom: "30px" }}
         cursor={false}
-        repeat={Infinity}
         sequence={[
-          "I'm a Front-end Developer",
-          2000,
-          "I'm a Back-end Developer",
-          2000,
-          "I'm studying to become a Fullstack Developer",
-          2000,
+          "Hello, I'm Marcelo Bracet",
+          1000,
+          "There are some things you should know about me",
+          1000,
+          "I'm 21 years old",
+          1000,
+          "studying to become a Fullstack Developer",
+          1000,
+          "I'm from Brazil",
+          1000,
+          "I live in Rio de Janeiro",
         ]}
+        repeat={Infinity}
+        style={{
+          fontSize: "2rem",
+          fontWeight: "bold",
+          position: "absolute",
+        }}
       />
-
-      {data.map((item) => (
-        <S.CardContainer
-          initial={{ y: -1000 }}
-          animate={{ y: 0 }}
-          transition={{ delay: item.id * 0.5, type: "spring", stiffness: 50 }}
-          key={item.id}
-        >
-          <CountUp
-            start={0}
-            end={item.number}
-            duration={9}
-            suffix={` - ${item.text}`}
-          />
-        </S.CardContainer>
-      ))}
+      <S.MainContainer>
+        {data.map((item) => (
+          <S.CardContainer
+            initial={{ y: -1000 }}
+            animate={{ y: 0 }}
+            transition={{ delay: item.id * 0.5, type: "spring", stiffness: 50 }}
+            key={item.id}
+          >
+            <CountUp
+              start={0}
+              end={item.number}
+              duration={9}
+              suffix={` - ${item.text}`}
+            />
+          </S.CardContainer>
+        ))}
+      </S.MainContainer>
       <Courses />
     </S.Container>
   );
 };
+
+export default Counter;

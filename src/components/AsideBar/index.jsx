@@ -1,15 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { BiHomeAlt2 } from "react-icons/bi";
 import { VscProject } from "react-icons/vsc";
-import { BsFillFileCodeFill } from "react-icons/bs";
-import { LuZap } from "react-icons/lu";
-import { Link } from "react-router-dom";
 
 import * as S from "./styles";
 
 import file from "../../assets/CV.pdf";
 
-export const AsideBar = () => {
+const AsideBar = () => {
   const asideData = [
     {
       id: 1,
@@ -23,13 +20,6 @@ export const AsideBar = () => {
       title: "Projects",
       path: "/projects",
       icon: <VscProject />,
-      isChoosed: false,
-    },
-    {
-      id: 3,
-      title: "Curriculum",
-      path: file,
-      icon: <BsFillFileCodeFill />,
       isChoosed: false,
     },
   ];
@@ -53,7 +43,7 @@ export const AsideBar = () => {
             onClick={() => setSelectedIndex(item.id)}
             style={{
               backgroundColor:
-                selectedIndex === item.id ? "#000" : "transparent",
+                selectedIndex === item.id ? "#444" : "transparent",
               borderRadius: "50%",
               height: "50px",
               width: "50px",
@@ -62,7 +52,7 @@ export const AsideBar = () => {
               display: "flex",
               justifyContent: " center",
               alignItems: "center",
-              boxShadow: "0 0 10px #000",
+              boxShadow: "0 0 10px #aaa",
             }}
             key={item.id}
           >
@@ -73,3 +63,5 @@ export const AsideBar = () => {
     </S.Container>
   );
 };
+
+export default AsideBar;

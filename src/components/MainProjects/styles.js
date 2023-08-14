@@ -34,7 +34,7 @@ export const Project = styled.div`
   margin: 1rem;
   border-radius: 0.5rem;
   overflow: hidden;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 5px 2px 3px rgba(0, 0, 0, 0.5);
   transition: all 0.3s ease-in-out;
   cursor: pointer;
 

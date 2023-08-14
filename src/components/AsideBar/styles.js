@@ -2,14 +2,11 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   position: fixed;
-  right: 30px;
-  bottom: 30px;
-  height: 250px;
+  bottom: 20px;
+  right: 20px;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #333;
   border-radius: 10px;
   gap: 20px;
   padding: 10px;

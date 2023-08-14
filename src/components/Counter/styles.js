@@ -25,6 +25,14 @@ export const CardContainer = styled(motion.div)`
   color: #000;
   margin: 10px 0;
   width: 200px;
-  box-shadow: 10px 10px 10px 0px black;
+  box-shadow: 3px 5px 8px 3px black;
   border-radius: 3px;
+`;
+
+export const MainContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px 0;
+  /* height: 100%; */
 `;

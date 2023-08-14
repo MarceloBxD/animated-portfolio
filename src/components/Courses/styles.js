@@ -34,3 +34,9 @@ export const CardContainer = styled(motion.div)`
     margin: 20px 0;
   }
 `;
+
+export const Image = styled.img`
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+`;

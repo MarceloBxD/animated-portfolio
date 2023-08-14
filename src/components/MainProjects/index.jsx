@@ -14,14 +14,14 @@ import cbl from "../../assets/images/cbl.png";
 import Aos from "aos";
 import "aos/dist/aos.css";
 
-export const MainProjects = () => {
+const MainProjects = () => {
   Aos.init();
   const projects = [
     {
       id: 0,
       title: "CBLConsultoria",
       img: cbl,
-      urL: "www.cblconsultoria.com.br",
+      urL: "http://cblconsultoria.com.br/",
     },
     {
       id: 1,
@@ -74,8 +74,9 @@ export const MainProjects = () => {
         {projects.map((project) => (
           <Link
             key={project.id}
-            style={{ textDecoration: "none", color: "#000" }}
             to={project.url}
+            target="_blank"
+            style={{ textDecoration: "none", color: "#000" }}
           >
             <C.Project data-aos="fade-down">
               <C.ProjectTitle>{project.title}</C.ProjectTitle>
@@ -104,3 +105,5 @@ export const MainProjects = () => {
     </C.Container>
   );
 };
+
+export default MainProjects;

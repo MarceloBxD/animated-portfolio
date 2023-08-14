@@ -3,10 +3,10 @@ import Particles from "react-particles";
 import { motion } from "framer-motion";
 import { loadSlim } from "tsparticles-slim"; // if you are going to use `loadSlim`, install the "tsparticles-slim" package too.
 import { useCallback } from "react";
-import { AsideBar } from "../../components/AsideBar";
+import { AsideBar } from "../../components";
 import { TypeAnimation } from "react-type-animation";
 
-export const Home = () => {
+const Home = () => {
   const particlesInit = useCallback(async (engine) => {
     console.log(engine);
     await loadSlim(engine);
@@ -150,3 +150,5 @@ export const Home = () => {
     </>
   );
 };
+
+export default Home;

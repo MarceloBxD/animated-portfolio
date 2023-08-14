@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-export function HeroPattern() {
+const HeroPattern = () => {
   return (
     <div
       style={{
@@ -422,4 +422,6 @@ export function HeroPattern() {
       </svg>
     </div>
   );
-}
+};
+
+export default HeroPattern;

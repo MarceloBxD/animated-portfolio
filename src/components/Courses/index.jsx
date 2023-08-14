@@ -1,9 +1,9 @@
 import React from "react";
 import * as S from "./styles";
-import { MainProjects } from "../MainProjects";
+import { MainProjects } from "../../components";
 
-export const Courses = () => {
-  const courses = [
+const Courses = () => {
+  const data = [
     {
       id: 1,
       name: "B7web",
@@ -31,7 +31,7 @@ export const Courses = () => {
     <div>
       <MainProjects />
       <S.CourseContainer>
-        {courses.map((course) => (
+        {data.map((course) => (
           <S.CardContainer
             animate={{ scale: 0.8 }}
             transition={{ duration: 0.5 }}
@@ -39,13 +39,12 @@ export const Courses = () => {
             whileTap={{ scale: 0.9 }}
             key={course.id}
           >
-            <img
-              style={{ width: "100%", height: "100%", cursor: "pointer" }}
-              src={course.img}
-            />
+            <S.Image src={course.img} />
           </S.CardContainer>
         ))}
       </S.CourseContainer>
     </div>
   );
 };
+
+export default Courses;
